@@ -28,9 +28,6 @@ body {
 
 .container {
   padding: 2em 0;
-}
-
-.main {
   margin: 0 auto;
   margin-bottom: 1em;
   width: 20rem;
@@ -43,7 +40,7 @@ body {
   background-image: url(../images/image-header-mobile.jpg);
   background-size: cover;
   height: 230px;
-  opacity: 0.5;
+  mix-blend-mode: multiply;
 }
 
 .overlay {
@@ -97,19 +94,17 @@ h2 {
 }
 
 @media screen and (min-width: 376px) {
-  body {
-    height: 100vh;
-    position: relative;
+
+  body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
   }
 
-  .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .main {
+  .container{
+    max-width: 1110px;
+    margin: auto;
     display: flex;
     flex-direction: row-reverse;
     text-align: left;
